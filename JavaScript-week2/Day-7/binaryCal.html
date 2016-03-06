@@ -1,0 +1,180 @@
+<!-- Enter your HTML code here -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Binary Calculator</title>
+    </head>
+    <body>
+        <style>
+        
+        .buC{
+            width:90%;
+            }
+            .buC> .b0{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:lightgreen;
+                color:brown;
+            }
+            .buC> .b1{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:lightgreen;
+                color:brown;
+            }
+             .buC> .bC{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:darkgreen;
+                color:white;
+            }
+             .buC> .bE{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:darkgreen;
+                color:white;
+            }
+            
+             .buC> .bA{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:black;
+                color:red;
+            }
+             .buC> .bSub{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:black;
+                color:red;
+            }
+             .buC> .bM{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:black;
+                color:red;
+            }
+             .buC> .bD{
+            font-size:18px;
+            height:36px;
+            width:22%;
+                background:black;
+                color:red;
+            }
+            
+        </style>
+        
+        
+        <div id="res" style="width:81%;font-size:24px;height:48px;font-size:20px;background:lightgray;border:solid"> </div>
+            <div id="btns" class="buC">
+                 <button id="btn0" class="b0">0</button> 
+                 <button id="btn1" class="b1">1</button> 
+                <button id="btnClr" class="bC">C</button> 
+                <button id="btnEql" class="bE">=</button> 
+                 <button id="btnSum" class="bA">+</button> 
+                <button id="btnSub" class="bSub">-</button>
+                <button id="btnMul" class="bM">*</button>
+                <button id="btnDiv" class="bD">/</button> 
+            </div>
+       
+    <script>
+        //var n=0;
+       var o="";
+         var btn0= document.getElementById("btn0");
+         var btn1= document.getElementById("btn1");
+         var btnSum= document.getElementById("btnSum");
+         var btnSub= document.getElementById("btnSub");
+         var btnMul= document.getElementById("btnMul");
+         var btnDiv= document.getElementById("btnDiv");
+        var btnClr= document.getElementById("btnClr");
+         var res= document.getElementById("res");       
+
+         btn0.onclick = function(){
+            var op="";
+             o=o+"0";
+             res.innerHTML=o;
+             
+         };
+        btn1.onclick = function(){
+      
+            o=o+"1";
+             res.innerHTML=o;
+
+         };
+
+     btnSum.onclick = function(){
+    //  n=n*10+1;
+    op="+";
+         o=o+"+"
+             res.innerHTML=o;
+
+         };
+             btnSub.onclick = function(){
+    op="-";
+      o=o+"-"
+             res.innerHTML=o;
+
+         };
+             btnMul.onclick = function(){
+           op="*";      
+                 o=o+"*";
+             res.innerHTML=o;
+
+         };
+        btnDiv.onclick = function(){
+                op="/"
+                 o=o+"/";
+             res.innerHTML=o;
+          
+
+         };
+        btnClr.onclick = function(){
+      
+                 o="";
+             res.innerHTML=o;
+
+         };
+        btnEql.onclick = function(){
+      var nums=o.split(op);
+var nums1=0,nums2=0;            
+ nums1=parseInt(nums[0],2);
+             nums2=parseInt(nums[1],2);
+            var r;
+if(isNaN(nums2))
+{
+r=nums1;}
+            else if(op=="+")
+                 {
+                  r=nums1+nums2;   
+                     
+                 }
+            else if(op=="-")
+                {
+                    
+                    r=nums1-nums2;
+                }
+            else if(op=="*"){
+                r=nums1*nums2;
+            }
+            else if(op=="/")
+                {
+                    r=nums1/nums2;
+                }
+            res.innerHTML=r.toString(2);
+o=r.toString(2);
+
+         };
+        
+        </script>
+        
+    
+    
+    </body>
+</html>

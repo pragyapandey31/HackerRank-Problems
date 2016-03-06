@@ -72,17 +72,79 @@
         </style>
         
         
-        <div id="res" style="width:81%;font-size:24px;height:48px;background:lightgray;border:solid">
+        <div id="res" style="width:100%;font-size:24px;height:48px;background:lightgray;border:solid"> </div>
             <div id="btns" class="buC">
                  <button id="btn0" class="b0">0</button> 
-                 <button id="btn0" class="b0">1</button> 
-                      <button id="btnClr" class="bC">C</button> 
+                 <button id="btn1" class="b1">1</button> 
                  <button id="btnEql" class="bE">=</button> 
                  <button id="btnSum" class="bA">+</button> 
                 <button id="btnSub" class="bSub">-</button>
                 <button id="btnMul" class="bM">*</button>
                 <button id="btnDiv" class="bD">/</button> 
             </div>
-        </div>
+       
+    <script>
+        var n=0;
+        var o="";
+         var btn0= document.getElementById("btn0");
+         var btn1= document.getElementById("btn1");
+         var res= document.getElementById("res");       
+
+         btn0.onclick = function(){
+            n=n*10+0;
+             o="";
+             res.innerHTML=n+o;
+             
+         };
+        btn1.onclick = function(){
+      n=n*10+1;
+            o="";
+             res.innerHTML=n+o;
+
+         };
+
+     btnSum.onclick = function(){
+    //  n=n*10+1;
+    
+         o="+"
+             res.innerHTML=n+o;
+n=0;
+         };
+             btnSub.onclick = function(){
+    
+      o="-"
+             res.innerHTML=n+o;
+n=0;
+         };
+             btnMul.onclick = function(){
+                 
+                 o="*";
+             res.innerHTML=n+o;
+n=0;
+         };
+        btnDiv.onclick = function(){
+                
+                 o="/";
+             res.innerHTML=n+o;
+             n=0;
+
+         };
+        btnClr.onclick = function(){
+      n=0;
+                 o="";
+             res.innerHTML=o;
+
+         };
+        btnEql.onclick = function(){
+      n=0;
+                 o="*";
+             res.innerHTML=n+o;
+
+         };
+        
+        </script>
+        
+    
+    
     </body>
 </html>

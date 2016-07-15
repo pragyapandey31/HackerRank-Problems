@@ -1,0 +1,102 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+//using std::string;
+
+
+int main() {
+    
+    
+    
+    
+  
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+  
+        int n;
+    cin>>n;
+    cout<<n;
+    string ca;
+        for(int i=0;i<n;i++)
+       {cout<<"hello";
+
+       
+            cin>>ca;
+              cout<<ca;
+//char ca[]=a.toCharArray();
+            // System.out.println(ca);
+            
+            int flag=0;
+            cout<<ca;
+            
+            for(int k=ca.length()-1;k>0;k--)
+               { //char z=a.charAt(k);
+
+                for(int j=k-1;j>=0;j--)
+                { 
+                 /*char y=a.charAt(j);
+                if(z>y)
+                    {
+                   
+                    System.out.println(a.substring(0,j)+z+a.substring(j+1,k)+y+a.substring(k+1));
+                   
+                    System.out.println(flag); 
+                    
+                    flag=1;
+                    break;*/
+                    cout<<ca;
+                if(ca[k]>ca[j])
+                    {
+                    char c=ca[k];
+                    ca[k]=ca[j];
+                    ca[j]=c;
+                while(j<k)
+                    if(ca[j+1]>ca[k-1])
+                    {
+                    char cm=ca[k-1];
+                    ca[k-1]=ca[j+1];
+                    ca[j+1]=cm;
+                        j=j+1;
+                    k=k-1;
+                        
+                }
+                    cout<<ca;
+                
+            flag=1;break;
+                }
+                
+                
+                
+                } 
+                    
+                    
+              if(flag==1)
+                  {
+                  break;
+              }
+               
+            
+            
+                 }
+        
+      //  System.out.println(a);
+            
+            
+            
+    
+    
+    
+            }
+return 0;}
+    
+    
+    
+    
+    
+    
+    
+ 
